@@ -25,7 +25,7 @@ PACKAGECONFIG[debug] = "DEBUG=1,DEBUG=0"
 PACKAGECONFIG[optee] = "SPD=opteed"
 
 # we want a debug build
-PACKAGECONFIG::append = " debug"
+PACKAGECONFIG:append = " debug"
 
 ATF_PLATFORM ??= "INVALID"
 
