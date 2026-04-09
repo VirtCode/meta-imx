@@ -10,7 +10,10 @@ PV .= "+git${SRCPV}"
 SRC_URI = "${ATF_SRC};branch=${SRCBRANCH}"
 ATF_SRC ?= "git://github.com/VirtCode/imx-atf.git;protocol=https"
 SRCBRANCH = "lf_v2.12_sanity"
-SRCREV = "00ab6f27dcc3a39605906be807e65fabc09d6aa7"
+
+# always build the latest revision
+# see https://docs.yoctoproject.org/ref-manual/variables.html#term-AUTOREV
+SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
 
