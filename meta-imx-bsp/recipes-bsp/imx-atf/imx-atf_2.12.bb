@@ -9,7 +9,7 @@ PV .= "+git${SRCPV}"
 
 SRC_URI = "${ATF_SRC};branch=${SRCBRANCH}"
 ATF_SRC ?= "git://github.com/VirtCode/imx-atf.git;protocol=https"
-SRCBRANCH = "lf_v2.12_sanity"
+SRCBRANCH = "lock-bug"
 
 # always build the latest revision
 # see https://docs.yoctoproject.org/ref-manual/variables.html#term-AUTOREV
