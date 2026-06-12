@@ -8,8 +8,8 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/BSD-3-Clause;m
 PV .= "+git${SRCPV}"
 
 SRC_URI = "${ATF_SRC};branch=${SRCBRANCH}"
-ATF_SRC ?= "git://github.com/VirtCode/imx-atf.git;protocol=https"
-SRCBRANCH = "mask-bug"
+ATF_SRC ?= "git:///atf;protocol=file"
+SRCBRANCH = "build"
 
 # always build the latest revision
 # see https://docs.yoctoproject.org/ref-manual/variables.html#term-AUTOREV
