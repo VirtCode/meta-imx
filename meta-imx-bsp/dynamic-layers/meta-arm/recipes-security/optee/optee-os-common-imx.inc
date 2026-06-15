@@ -40,9 +40,10 @@ OPTEEMACHINE:mx95-nxp-bsp      = "imx-mx95evk"
 # Strip the leading imx-
 PLATFORM_FLAVOR = "${@d.getVar('OPTEEMACHINE')[4:]}"
 
+# why do these have to be disabled by default??
 EXTRA_OEMAKE:append = " \
-    CFG_TEE_TA_LOG_LEVEL=0 \
-    CFG_TEE_CORE_LOG_LEVEL=0 \
+    CFG_TEE_TA_LOG_LEVEL=3 \
+    CFG_TEE_CORE_LOG_LEVEL=3 \
 "
 
 EXTRA_OEMAKE:append:imx8mq-lpddr4-wevk = " \
