@@ -26,9 +26,11 @@ PACKAGECONFIG ??= " \
 PACKAGECONFIG[crrm] = "IMX_CRRM=1"
 PACKAGECONFIG[debug] = "DEBUG=1,DEBUG=0"
 PACKAGECONFIG[optee] = "SPD=opteed"
+PACKAGECONFIG[debugfs] = "USE_DEBUGFS=1"
 
-# we want a debug build
+# we want a debug build with debugfs
 PACKAGECONFIG:append = " debug"
+PACKAGECONFIG:append = " debugfs"
 
 ATF_PLATFORM ??= "INVALID"
 
