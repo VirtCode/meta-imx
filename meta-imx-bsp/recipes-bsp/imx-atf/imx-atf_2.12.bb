@@ -27,10 +27,11 @@ PACKAGECONFIG[crrm] = "IMX_CRRM=1"
 PACKAGECONFIG[debug] = "DEBUG=1,DEBUG=0"
 PACKAGECONFIG[optee] = "SPD=opteed"
 PACKAGECONFIG[debugfs] = "USE_DEBUGFS=1"
+PACKAGECONFIG[regdump] = "USE_REGDUMP=1"
 
-# we want a debug build with debugfs
+# we want a debug build with regdump
 PACKAGECONFIG:append = " debug"
-PACKAGECONFIG:append = " debugfs"
+PACKAGECONFIG:append = " regdump"
 
 ATF_PLATFORM ??= "INVALID"
 
